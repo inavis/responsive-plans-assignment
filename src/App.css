@@ -1,38 +1,76 @@
-.App {
+body{
+  background-image: linear-gradient(to right,rgb(29, 88, 216), rgb(60, 138, 228));
+}
+/* .App {
+  font-family:sans-serif;
+  text-align: center;
+} */
+.content {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  justify-content:space-around;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  width: 390px;
+  font-size: small;
+  /* text-align: center; */
+  box-shadow: 1px 3px whitesmoke;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.card:hover{
+  margin-top: 3px;
+}
+
+.planname{
+  text-align: center;
+  color: gray;
+  font-weight: bold;
+  font-size: medium;
+}
+.planrate{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rate{
+  font-size: 60px;
+  font-weight: bold;
+}
+.month{
+  font-size: 15px;
+}
+.features{
+  padding: 10px;
+  font-size: 18px;
+}
+.feature-avail{
+  padding: 10px;
+  color: black;
+}
+.feature-notavail{
+  padding: 10px;
+  color: gray;
+}
+.fas{
+  font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button{
+  background-color: rgb(60, 138, 228);
+  color:white;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline:none;
+  border-radius: 50px;
+  font-weight: bold;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover  .button{
+  background-color: rgb(41, 100, 230);
 }
