@@ -83,14 +83,14 @@ function Plans({name,rate,features }) {
     <div className="features">
       
       {
-        features.filter(({ft,avail}) =>(
+        features.filter(({ft,avail,bold}) =>(
           avail===true
-        )).map(({ft})=><Available content={ft}/>)
+        )).map(({ft,bold})=><Available content={ft} bold={bold}/>)
       }
        {
-        features.filter(({ft,avail}) =>(
+        features.filter(({ft,avail,bold}) =>(
           avail===false
-        )).map(({ft})=><Notavailable content={ft}/>)
+        )).map(({ft,bold})=><Notavailable content={ft} bold={bold}/>)
       }
     </div>
     <div >
@@ -101,15 +101,21 @@ function Plans({name,rate,features }) {
   );
 }
 
-function Available({content}){
-  console.log(content);
+function Available({content,bold}){
+  console.log(content,bold);
+  const display = (bold)?<div className="feature-avail"><i class="fas fa-check"></i><b> {content} </b></div>:<div className="feature-avail"><i class="fas fa-check"></i> {content} </div>
   return (
-    <div className="feature-avail"><i class="fas fa-check"></i>            {content}</div>
+    <div>
+      {display}
+    </div>
   );
 }
-function Notavailable({content}){
-  console.log(content)
+function Notavailable({content,bold}){
+  console.log(content,bold)
+  const display = (bold)?<div className="feature-notavail"><i class="fas fa-times"></i><b> {content} </b></div>:<div className="feature-notavail"><i class="fas fa-times"></i> {content} </div>
   return (
-    <div className="feature-notavail"><i class="fas fa-times"></i>              {content}</div>
+    <div>
+      {display}
+    </div>
   );
 }

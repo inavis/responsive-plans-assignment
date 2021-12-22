@@ -18,7 +18,7 @@ body{
   background-color: white;
   padding: 30px;
   border-radius: 5px;
-  width: 390px;
+  width: 350px;
   font-size: small;
   /* text-align: center; */
   box-shadow: 1px 3px whitesmoke;
@@ -47,7 +47,7 @@ body{
 }
 .features{
   padding: 10px;
-  font-size: 18px;
+  font-size: 17px;
 }
 .feature-avail{
   padding: 10px;
